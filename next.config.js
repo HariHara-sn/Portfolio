@@ -1,10 +1,10 @@
 const path = require('path')
  
 module.exports = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
-  },
+  output: 'export',
+  trailingSlash: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -22,5 +22,8 @@ module.exports = {
         pathname: '**',
       },
     ],
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
   },
 }
